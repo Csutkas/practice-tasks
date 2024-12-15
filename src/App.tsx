@@ -6,6 +6,7 @@ import NotFound from './pages/not-found';
 import BinaryGap from './pages/binary-gap';
 import { ArrayCyclicRotation } from './pages/array-cyclic-rotation';
 import { ArrayUnpairedElement } from './pages/array-unpaired-element';
+import { FrogJump } from './pages/frog-jump';
 
 const App: React.FC = () => {
   return (
@@ -24,6 +25,9 @@ const App: React.FC = () => {
           <li>
             <Link to="/array-unpaired-element">Array unpaired element</Link>
           </li>
+          <li>
+            <Link to="/frog-jump">Frog jump</Link>
+          </li>
         </ul>
       </nav>
       <Routes>
@@ -37,6 +41,7 @@ const App: React.FC = () => {
           path="/array-unpaired-element"
           element={<ArrayUnpairedElement />}
         />
+        <Route path="/frog-jump" element={<FrogJump />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
