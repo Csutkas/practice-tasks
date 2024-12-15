@@ -5,6 +5,7 @@ import Home from './pages/home';
 import NotFound from './pages/not-found';
 import BinaryGap from './pages/binary-gap';
 import { ArrayCyclicRotation } from './pages/array-cyclic-rotation';
+import { ArrayUnpairedElement } from './pages/array-unpaired-element';
 
 const App: React.FC = () => {
   return (
@@ -20,6 +21,9 @@ const App: React.FC = () => {
           <li>
             <Link to="/array-cyclic-rotation">Array cyclic rotation</Link>
           </li>
+          <li>
+            <Link to="/array-unpaired-element">Array unpaired element</Link>
+          </li>
         </ul>
       </nav>
       <Routes>
@@ -28,6 +32,10 @@ const App: React.FC = () => {
         <Route
           path="/array-cyclic-rotation"
           element={<ArrayCyclicRotation />}
+        />
+        <Route
+          path="/array-unpaired-element"
+          element={<ArrayUnpairedElement />}
         />
         <Route path="*" element={<NotFound />} />
       </Routes>
