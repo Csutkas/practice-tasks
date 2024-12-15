@@ -10,7 +10,7 @@ const Home: React.FC = () => {
   const binary = dec2bin(test);
   function binaryGap(N: number): number {
     const binaryN = dec2bin(N);
-    const array: string[] = binaryN.split('1');
+    const array: string[] = binaryN.split('1').slice(0, -1);
 
     const maxGap: number = array.reduce(
       (max, gap) => Math.max(max, gap.length),
