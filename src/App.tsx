@@ -7,6 +7,7 @@ import BinaryGap from './pages/binary-gap';
 import { ArrayCyclicRotation } from './pages/array-cyclic-rotation';
 import { ArrayUnpairedElement } from './pages/array-unpaired-element';
 import { FrogJump } from './pages/frog-jump';
+import { ArrayFindMissingElement } from './pages/array-find-missing-element';
 
 const App: React.FC = () => {
   return (
@@ -28,6 +29,11 @@ const App: React.FC = () => {
           <li>
             <Link to="/frog-jump">Frog jump</Link>
           </li>
+          <li>
+            <Link to="/array-find-missing-element">
+              Array find missing element
+            </Link>
+          </li>
         </ul>
       </nav>
       <Routes>
@@ -42,6 +48,10 @@ const App: React.FC = () => {
           element={<ArrayUnpairedElement />}
         />
         <Route path="/frog-jump" element={<FrogJump />} />
+        <Route
+          path="/array-find-missing-element"
+          element={<ArrayFindMissingElement />}
+        />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
